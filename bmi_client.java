@@ -21,7 +21,9 @@ import java.awt.GridLayout;
 	import javax.swing.JTextField;
 
 	public class bmi_client
-	{
+	{	//Instructions: run the bmi_server.java program first to launch the server for connection, then follow the instructions on the GUI
+		//First input your weight in Kilograms and in the second box input your height in meters, then hit submit and BMI will be calculated
+		//Lines 27-65 setup the GUI of this program to have an interface for the user to implement their height and weight
 		public JFrame mainFrame; static TextArea TxtArea = null;
 		bmi_client()
 		{
@@ -36,12 +38,12 @@ import java.awt.GridLayout;
 	});  
 			
 			JLabel w = new JLabel();
-			w.setText("Weight (in Kg): ");
+			w.setText("Weight (in Kg): ");//Prompts the user to input weight in Kilograms
 			w.setBounds(20, 20, 200, 20);
 			JTextField wt = new JTextField(20);
 			wt.setBounds(130, 20, 200, 20);
 		JLabel h = new JLabel();
-		h.setText("Height (in Meters): ");
+		h.setText("Height (in Meters): ");//Prompts the user to input height in Meters
 		h.setBounds(20, 60, 200, 20);
 		JTextField ht = new JTextField(20);
 		ht.setBounds(130, 60, 200, 20);

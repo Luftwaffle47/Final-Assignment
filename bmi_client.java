@@ -76,7 +76,7 @@ import java.awt.GridLayout;
 				Socket socket = null;
 				String host = "localhost";
 				InetAddress address = InetAddress.getByName(host);
-				socket = new Socket(address, 2525);
+				socket = new Socket(address, 8000);
 
 
 				OutputStream os = socket.getOutputStream();

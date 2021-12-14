@@ -18,27 +18,29 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-
+//This is the second version of the server file that was used for Question 1
+//This version is for Question 2 which allows for multithreading capabilities which will allow for multiple clients to connect
+//See lines 95-120 for my attempted implmementation
 public class bmi_server2
 {
-public JFrame mainFrame; static TextArea TxtArea = null;
+	public JFrame mainFrame; static TextArea TxtArea = null;
   
-bmi_server2()
+	bmi_server2()
 {
-mainFrame = new JFrame("Server");
-mainFrame.setSize(600,600);
-mainFrame.setLayout(new GridLayout(3, 1));
-mainFrame.addWindowListener(new WindowAdapter() {
-public void windowClosing(WindowEvent windowEvent){
-System.exit(0);
-}
+	mainFrame = new JFrame("Server");
+	mainFrame.setSize(600,600);
+	mainFrame.setLayout(new GridLayout(3, 1));
+	mainFrame.addWindowListener(new WindowAdapter() {
+	public void windowClosing(WindowEvent windowEvent){
+	System.exit(0);
+	}
 });   
-TxtArea = new TextArea();
-TxtArea.setBounds(20, 20, 450, 300);
-mainFrame.setLayout(null);
-mainFrame.add(TxtArea);
-mainFrame.setLocationRelativeTo(null);
-mainFrame.setVisible(true);
+	TxtArea = new TextArea();
+	TxtArea.setBounds(20, 20, 450, 300);
+	mainFrame.setLayout(null);
+	mainFrame.add(TxtArea);
+	mainFrame.setLocationRelativeTo(null);
+	mainFrame.setVisible(true);
 }
   
 public static void main(String args[])

@@ -42,14 +42,14 @@ import java.awt.GridLayout;
 			w.setBounds(20, 20, 200, 20);
 			JTextField wt = new JTextField(20);
 			wt.setBounds(130, 20, 200, 20);
-		JLabel h = new JLabel();
-		h.setText("Height (in Meters): ");//Prompts the user to input height in Meters
-		h.setBounds(20, 60, 200, 20);
-		JTextField ht = new JTextField(20);
-		ht.setBounds(130, 60, 200, 20);
-		JButton submitButton = new JButton("Submit");
-		submitButton.setBounds(200, 100, 100, 20);
-		submitButton.addActionListener(new ActionListener() {
+			JLabel h = new JLabel();
+			h.setText("Height (in Meters): ");//Prompts the user to input height in Meters
+			h.setBounds(20, 60, 200, 20);
+			JTextField ht = new JTextField(20);
+			ht.setBounds(130, 60, 200, 20);
+			JButton submitButton = new JButton("Submit");
+			submitButton.setBounds(200, 100, 100, 20);
+			submitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				connect(wt.getText(),ht.getText()); //pass all the form parameters here
 			}
@@ -73,8 +73,8 @@ import java.awt.GridLayout;
 		public static void connect(String w, String h)
 	{
 			try {
-				TxtArea.append("\nWeight: "+w);
-				TxtArea.append("\nHeight: "+h);
+				TxtArea.append("\nWeight: "+w);//Gathers the user entry for weight
+				TxtArea.append("\nHeight: "+h);//Gathers the user entry for height
 				Socket socket = null;
 				String host = "localhost";
 				InetAddress address = InetAddress.getByName(host);
@@ -95,7 +95,7 @@ import java.awt.GridLayout;
 				String message = br.readLine();
 				TxtArea.append("\n"+message);
 	} 
-			catch (UnknownHostException ex) {
+			catch (UnknownHostException ex) { //These exceptions will be caught if the bmi_server.java is not run first or It cannot connect to the server
 				Logger.getLogger(bmi_client.class.getName()).log(Level.SEVERE, null, ex);
 			} 
 			catch (Exception ex) {

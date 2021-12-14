@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 public class bmi_server
-{
+{//Instructions: Make sure you run this file first before the bmi_client file as otherwise the client will not recieve a calculation properly
 	public JFrame mainFrame; static TextArea TxtArea = null;
   
 bmi_server()
